@@ -1,5 +1,12 @@
 const container = document.querySelector('.container');
-let gridSize = 16; //16x16
+const startButton = document.querySelector('button');
+
+let gridSize;
+
+startButton.addEventListener('click', () => {
+    gridSize = prompt("Enter grid size:");
+});
+
 
 for(let i = 0; i < gridSize*gridSize; i++)
 {
