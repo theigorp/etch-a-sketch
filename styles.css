@@ -13,7 +13,7 @@ body {
     flex-wrap: wrap;
     height: 600px;
     width: 80%;
-    border: 1px solid red;
+    border: 3px solid black;
 }
 
 .new-block {
