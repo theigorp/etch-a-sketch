@@ -8,5 +8,7 @@ for(let i = 0; i < gridSize*gridSize; i++)
     container.appendChild(grid);
 }
 
-grid.style.height = '92px';
-grid.style.width = '92px';
+container.addEventListener('mouseover', (e) => {
+    if(e.target == container) e.target.style.backgroundColor = 'white';
+    else e.target.style.backgroundColor = 'black';
+});
