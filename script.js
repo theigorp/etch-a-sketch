@@ -7,11 +7,11 @@ startButton.addEventListener('click', () => {
     if(gridSize > 64) alert('Please enter values less than or equal to 64');
     else
     {
-        for(let i = 0; i < (gridSize*gridSize); i++)
+        for(let i = 0; i < gridSize*gridSize; i++)
         {
-        const grid = document.createElement('div');
-        grid.classList.add('new-block');
-        container.appendChild(grid);
+            const grid = document.createElement('div');
+            grid.classList.add('new-block');
+            container.appendChild(grid);
         }
     }
 });
