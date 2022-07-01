@@ -1,3 +1,10 @@
 body {
     box-sizing: border-box;
 }
+
+.new-block {
+    box-sizing: border-box;
+    height: 50px;
+    width: 50px;
+    border: 2px solid red;
+}
