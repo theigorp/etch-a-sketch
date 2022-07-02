@@ -42,3 +42,15 @@ function createGrid(gridSize)
         container.appendChild(grid).classList.add('new-block');
     }
 }
+
+function randomRGB()
+{
+    let red = random();
+    let green = random();
+    let blue = random();
+
+    let string = `rgb(${red}, ${green}, ${blue})`;
+    return string;
+}
+
+const random = () => Math.floor((Math.random() * 255)+1); //returns random number between 0 and 255
