@@ -9,21 +9,8 @@ clearButton.addEventListener('click', () => {
     let gridSize = prompt("Enter grid size:");
     //rows = gridSize, cols = gridSize
 
-    //createGrid(rows, cols);
-
-    if(gridSize > 64) alert('Please enter values less than or equal to 64');
-    else
-    {   
-        container.style.border = 'none';
-        container.style.setProperty('--gridRows', gridSize);
-        container.style.setProperty('--gridCols', gridSize);
-
-        for(let i = 0; i < gridSize*gridSize; i++)
-        {
-            const grid = document.createElement('div');
-            container.appendChild(grid).classList.add('new-block');
-        }
-    }
+    createGrid(gridSize);
+    
 });
 
 container.addEventListener('mouseover', (e) => {
@@ -35,10 +22,11 @@ const resetGrid = () => container.innerHTML = '';
 
 function createGrid(gridSize)
 {
+    container.style.border = 'none';
     container.style.setProperty('--gridRows', gridSize);
     container.style.setProperty('--gridCols', gridSize);
 
-    for(let i = 0; i < gridSize*gridSize; i++)
+   for(let i = 0; i < gridSize*gridSize; i++)
     {
         const grid = document.createElement('div');
         container.appendChild(grid).classList.add('new-block');
