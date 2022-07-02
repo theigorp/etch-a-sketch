@@ -1,7 +1,9 @@
 const container = document.querySelector('.container');
-const startButton = document.querySelector('button');
+const clearButton = document.querySelector('#clear');
+const rgbButton = document.querySelector('#rgb');
+const colorButton = document.querySelector('#color');
 
-startButton.addEventListener('click', () => {
+clearButton.addEventListener('click', () => {
     resetGrid();
 
     let gridSize = prompt("Enter grid size:");
