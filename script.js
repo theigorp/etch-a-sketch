@@ -26,7 +26,7 @@ startButton.addEventListener('click', () => {
 
 container.addEventListener('mouseover', (e) => {
     if(e.target == container) e.target.style.backgroundColor = 'white';
-    else e.target.style.backgroundColor = 'black';
+    else e.target.style.backgroundColor = '#C17767';
 });
 
 const resetGrid = () => container.innerHTML = '';
@@ -41,5 +41,4 @@ function createGrid(gridSize)
         const grid = document.createElement('div');
         container.appendChild(grid).classList.add('new-block');
     }
-
 }
