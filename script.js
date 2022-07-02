@@ -48,7 +48,7 @@ function createGrid(gridSize)
         container.appendChild(grid).classList.add('new-block');
     }
 }
-
+//generate and return radnom rgb color
 function randomRGB()
 {
     let red = random();
@@ -60,8 +60,24 @@ function randomRGB()
 
 const random = () => Math.floor((Math.random() * 255)+1); //returns random number between 0 and 255
 
-const sizeValue = document.querySelector('.sizeValue');
+//dynamic slider
 
+const gridSizeValue = document.querySelector('.gridSizeValue');
+
+//updates div containing sizeValue class on website
 function updateSizeValue(value) {
-    sizeValue.innerHTML = `${value} x ${value}`
+    gridSizeValue.textContent = `${value} x ${value}`
+}
+
+function setCurrentSize(newSize) {
+    currentSize = newSize
+}
+
+slider.onmousemove = e => updateSizeValue(e.target.value);
+sizeSlider.onchange = (e) => changeSize(e.target.value);
+
+function changeSize(value) {
+    setCurrentSize(value);
+    updateSizeValue(value);
+    resetGrid();
 }
