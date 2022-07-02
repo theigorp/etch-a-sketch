@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #cbf3f0;
+    background-color: #06283D;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -20,6 +20,7 @@ main {
 .controls {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 :root {
@@ -39,7 +40,7 @@ main {
 
 .new-block {
     box-sizing: border-box;
-    border: 1px solid #9AADBF;
+    border: 1px solid #06283D;
     margin: 0;
     padding: 0;
 }
@@ -56,9 +57,14 @@ h1 {
 button {
     height: 50px;
     width: 200px;
-    background-color: #9AADBF;
+    background-color: #06283D;
     border-radius: 10px;
-    border: 2px solid white;
-    color: black;
+    border: 2px solid #1363DF;
+    color: white;
     font-size: 16px;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #1363DF;
 }

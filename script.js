@@ -3,6 +3,9 @@ const clearButton = document.querySelector('#clear');
 const rgbButton = document.querySelector('#rgb');
 const colorButton = document.querySelector('#color');
 
+let isRgbOn = false;
+let isColorOn = true;
+
 clearButton.addEventListener('click', () => {
     resetGrid();
 
@@ -13,9 +16,22 @@ clearButton.addEventListener('click', () => {
     
 });
 
+rgbButton.addEventListener('click', () => {
+    isColorOn = false;
+    isRgbOn = true;
+});
+
+colorButton.addEventListener('click', () => {
+    isRgbOn = false;
+    isColorOn = true;
+});
+
 container.addEventListener('mouseover', (e) => {
     if(e.target == container) e.target.style.backgroundColor = 'white';
-    else e.target.style.backgroundColor = '#C17767';
+    else {
+        if(isRgbOn) e.target.style.backgroundColor = randomRGB();
+        else if (isColorOn) e.target.style.backgroundColor = '#e8765c';
+    }
 });
 
 const resetGrid = () => container.innerHTML = '';
