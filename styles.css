@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #9AADBF;
+    background-color: #cbf3f0;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -45,7 +45,7 @@ main {
 }
 
 h1 {
-    color: white;
+    color: #ff9f1c;
 }
 
 .slider {
@@ -56,4 +56,9 @@ h1 {
 button {
     height: 50px;
     width: 200px;
+    background-color: #9AADBF;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: black;
+    font-size: 16px;
 }
