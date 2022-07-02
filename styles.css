@@ -34,7 +34,7 @@ main {
     grid-template-columns: repeat(var(--gridCols), 1fr);
     height: 600px;
     width: 600px;
-
+    box-shadow: 7px 7px 15px black;
 }
 
 .new-block {
