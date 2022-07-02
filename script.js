@@ -7,14 +7,11 @@ const slider = document.querySelector('input');
 let isRgbOn = false;
 let isColorOn = true;
 
-clearButton.addEventListener('click', () => {
-    resetGrid();
+gridSize = 16;
 
-    let gridSize = prompt("Enter grid size:"); //rows = gridSize, cols = gridSize
+window.onload = () => createGrid(gridSize);
 
-    createGrid(gridSize);
-    
-});
+clearButton.addEventListener('click', () => resetGrid());
 
 rgbButton.addEventListener('click', () => {
     isColorOn = false;
@@ -66,18 +63,19 @@ const gridSizeValue = document.querySelector('.gridSizeValue');
 
 //updates div containing sizeValue class on website
 function updateSizeValue(value) {
-    gridSizeValue.textContent = `${value} x ${value}`
+    gridSizeValue.textContent = `${value} x ${value}`;
 }
 
 function setCurrentSize(newSize) {
-    currentSize = newSize
+    gridSize = newSize;
 }
 
 slider.onmousemove = e => updateSizeValue(e.target.value);
-sizeSlider.onchange = (e) => changeSize(e.target.value);
+slider.onchange = (e) => changeSize(e.target.value);
 
 function changeSize(value) {
     setCurrentSize(value);
     updateSizeValue(value);
     resetGrid();
+    createGrid(gridSize);
 }
