@@ -15,7 +15,8 @@
             <button id="color">COLOR MODE</button>
             <button id="rgb">RGB MODE</button>
             <button id="clear">CLEAR</button>
-            <input type="range" min="2" max="64" value="20" class="slider">
+            <div class="sizeValue">20x20</div>
+            <input type="range" min="2" max="64" value="20" class="slider" onchange="updateTextInput(this.value);">
         </div>
 
         <div class="container"></div>

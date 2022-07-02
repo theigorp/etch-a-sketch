@@ -2,6 +2,7 @@ const container = document.querySelector('.container');
 const clearButton = document.querySelector('#clear');
 const rgbButton = document.querySelector('#rgb');
 const colorButton = document.querySelector('#color');
+const slider = document.querySelector('input');
 
 let isRgbOn = false;
 let isColorOn = true;
@@ -9,8 +10,7 @@ let isColorOn = true;
 clearButton.addEventListener('click', () => {
     resetGrid();
 
-    let gridSize = prompt("Enter grid size:");
-    //rows = gridSize, cols = gridSize
+    let gridSize = prompt("Enter grid size:"); //rows = gridSize, cols = gridSize
 
     createGrid(gridSize);
     
@@ -55,8 +55,13 @@ function randomRGB()
     let green = random();
     let blue = random();
 
-    let string = `rgb(${red}, ${green}, ${blue})`;
-    return string;
+    return `rgb(${red}, ${green}, ${blue})`;
 }
 
 const random = () => Math.floor((Math.random() * 255)+1); //returns random number between 0 and 255
+
+const sizeValue = document.querySelector('.sizeValue');
+
+function updateSizeValue(value) {
+    sizeValue.innerHTML = `${value} x ${value}`
+}
